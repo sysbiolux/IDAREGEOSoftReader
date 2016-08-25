@@ -2,7 +2,7 @@ package idare.GEOSoft;
 
 import idare.GEOSoft.GEOSoftReader.Interpretation;
 import idare.ThirdParty.BoundsPopupMenuListener;
-import idare.imagenode.internal.Utilities.GUIUtils;
+import idare.imagenode.Utilities.GUIUtils;
 
 import java.awt.Color;
 import java.awt.Dimension;

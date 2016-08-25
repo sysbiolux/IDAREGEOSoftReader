@@ -4,7 +4,7 @@ import idare.GEOSoft.GEOSoftReader;
 import idare.GEOSoft.GEOTunableHandlerFactory;
 import idare.imagenode.Interfaces.Plugin.IDAREPlugin;
 import idare.imagenode.Interfaces.Plugin.IDAREService;
-import idare.imagenode.internal.Utilities.StringUtils;
+import idare.imagenode.Utilities.StringUtils;
 import idare.imagenode.IDAREImageNodeAppService;
 
 import java.io.File;
@@ -19,7 +19,6 @@ import org.slf4j.LoggerFactory;
 
 public class CyActivator extends AbstractCyActivator implements IDAREPlugin{
 
-	Logger log;
 	BundleContext context;
 	GEOSoftReader pluginreader;
 	@Override
@@ -31,9 +30,6 @@ public class CyActivator extends AbstractCyActivator implements IDAREPlugin{
 		try{
 			//try whether the app already is registered.
 			IDAREImageNodeAppService appserv = getService(context, IDAREImageNodeAppService.class);
-			System.out.println("Setting LogFile To " + appserv.getlogFileName());
-			System.setProperty("logfile.name", appserv.getlogFileName());			
-			log = LoggerFactory.getLogger(CyActivator.class);
 			System.out.println("Registering GEO Soft Reader.");
 			appserv.registerPlugin(this);
 		}
@@ -46,17 +42,12 @@ public class CyActivator extends AbstractCyActivator implements IDAREPlugin{
 	
 	public void shutDown()
 	{			
-		if (log != null)
-		{
-			System.out.println("DeRegistering GEO Soft Reader.");
-		}
 		try{
-			IDAREImageNodeAppService appserv = getService(context, IDAREImageNodeAppService.class);
+			IDAREImageNodeAppService appserv = getService(context, IDAREImageNodeAppService.class);		
 			appserv.deRegisterPlugin(this);
 		}
 		catch(Exception e)
-		{
-			System.out.println("No App to deregister from.");
+		{			
 		}
 	}
 

@@ -2,29 +2,28 @@ Manifest-Version: 1.0
 Bundle-SymbolicName: GEOSoft
 Built-By: thomas
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1470979525475
+Bnd-LastModified: 1472124834576
 Import-Package: idare.GEOSoft;resolution:=optional,idare.ThirdParty;re
  solution:=optional,idare.imagenode;resolution:=optional,idare.imageno
  de.Interfaces.DataSetReaders;resolution:=optional,idare.imagenode.Int
  erfaces.DataSetReaders.WorkBook;resolution:=optional,idare.imagenode.
  Interfaces.DataSetReaders.WorkBook.BasicImplementation;resolution:=op
  tional,idare.imagenode.Interfaces.Plugin;resolution:=optional,idare.i
- magenode.internal.Utilities;resolution:=optional,idare.imagenode.inte
- rnal.exceptions.io;resolution:=optional,javax.swing;resolution:=optio
- nal,javax.swing.event;resolution:=optional,javax.swing.table;resoluti
- on:=optional,org.cytoscape.service.util;version="[3.3,4)";resolution:
- =optional,org.cytoscape.work;version="[3.3,4)";resolution:=optional,o
- rg.cytoscape.work.swing;version="[3.3,4)";resolution:=optional,org.os
- gi.framework;version="[1.5,2)";resolution:=optional,org.slf4j;version
- ="[1.5,2)";resolution:=optional
+ magenode.Utilities;resolution:=optional,idare.imagenode.exceptions.io
+ ;resolution:=optional,javax.swing;resolution:=optional,javax.swing.ev
+ ent;resolution:=optional,javax.swing.table;resolution:=optional,org.c
+ ytoscape.service.util;version="[3.3,4)";resolution:=optional,org.cyto
+ scape.work;version="[3.3,4)";resolution:=optional,org.cytoscape.work.
+ swing;version="[3.3,4)";resolution:=optional,org.osgi.framework;versi
+ on="[1.5,2)";resolution:=optional
 DynamicImport-Package: *
 Tool: Bnd-1.15.0
 Export-Package: idare.GEOSoft;uses:="org.cytoscape.work.swing,idare.im
  agenode.Interfaces.DataSetReaders,org.cytoscape.work,idare.imagenode.
- Interfaces.DataSetReaders.WorkBook.BasicImplementation,idare.imagenod
- e.internal.Utilities,idare.imagenode.Interfaces.DataSetReaders.WorkBo
- ok,idare.imagenode.internal.exceptions.io,javax.swing,javax.swing.tab
- le,javax.swing.event,idare.ThirdParty"
+ Utilities,idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImp
+ lementation,idare.imagenode.Interfaces.DataSetReaders.WorkBook,idare.
+ imagenode.exceptions.io,javax.swing,javax.swing.table,javax.swing.eve
+ nt,idare.ThirdParty"
 Bundle-Version: 1.0
 Bundle-Name: GEOSoft [idare.GEOSoft]
 Bundle-Activator: idare.GEOSoft.internal.CyActivator

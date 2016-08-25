@@ -9,8 +9,8 @@ import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.Ba
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.BasicIDARERow;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.BasicIDARESheet;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.BasicIDAREWorkbook;
-import idare.imagenode.internal.Utilities.StringUtils;
-import idare.imagenode.internal.exceptions.io.WrongFormat;
+import idare.imagenode.Utilities.StringUtils;
+import idare.imagenode.exceptions.io.WrongFormat;
 
 import java.io.BufferedReader;
 import java.io.File;
