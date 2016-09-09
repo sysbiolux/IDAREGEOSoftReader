@@ -2,10 +2,10 @@ package idare.GEOSoft.internal;
 
 import idare.GEOSoft.GEOSoftReader;
 import idare.GEOSoft.GEOTunableHandlerFactory;
-import idare.imagenode.Interfaces.Plugin.IDAREPlugin;
-import idare.imagenode.Interfaces.Plugin.IDAREService;
-import idare.imagenode.Utilities.StringUtils;
 import idare.imagenode.IDAREImageNodeAppService;
+import idare.imagenode.Interfaces.Plugin.IDAREPlugin;
+import idare.imagenode.Utilities.StringUtils;
+import idare.imagenode.internal.IDAREService;
 
 import java.io.File;
 import java.util.Properties;
@@ -36,6 +36,7 @@ public class CyActivator extends AbstractCyActivator implements IDAREPlugin{
 		catch(Exception e)
 		{			
 			e.printStackTrace(System.out);
+			throw new Exception("IDARE Not Found.");
 		}
 	
 	}	

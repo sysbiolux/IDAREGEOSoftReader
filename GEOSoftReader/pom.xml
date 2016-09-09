@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<properties>
-		<bundle.symbolicName>GEOSoft</bundle.symbolicName>
+		<bundle.symbolicName>IDAREGEOSoftReader</bundle.symbolicName>
 		<bundle.namespace>idare.GEOSoft</bundle.namespace>
 		<cytoscape.api.version>3.3.0</cytoscape.api.version>
 		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
@@ -15,7 +15,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>IDARE</groupId>
 	<packaging>bundle</packaging>
-	<artifactId>GEOSoft</artifactId>
+	<artifactId>IDAREGEOSoftReader</artifactId>
 	<version>1.0</version>
 
 	<name>${bundle.symbolicName} [${bundle.namespace}]</name>
@@ -27,6 +27,7 @@
 				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
+		<directory>.</directory>		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

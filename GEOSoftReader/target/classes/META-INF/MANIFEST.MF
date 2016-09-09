@@ -1,8 +1,21 @@
 Manifest-Version: 1.0
-Bundle-SymbolicName: GEOSoft
+Export-Package: idare.GEOSoft;uses:="org.cytoscape.work,idare.imagenod
+ e.Interfaces.DataSetReaders,org.cytoscape.work.swing,idare.imagenode.
+ exceptions.io,idare.imagenode.Interfaces.DataSetReaders.WorkBook.Basi
+ cImplementation,idare.imagenode.Utilities,idare.imagenode.Interfaces.
+ DataSetReaders.WorkBook,javax.swing,idare.ThirdParty,javax.swing.tabl
+ e,javax.swing.event"
 Built-By: thomas
+Tool: Bnd-1.15.0
+Bundle-Name: GEOSoft [idare.GEOSoft]
+Created-By: Apache Maven Bundle Plugin
+Cytoscape-App-Dependencies: IDARE;1.0
+DynamicImport-Package: *
+Build-Jdk: 1.7.0_111
+Bundle-Version: 1.0
+Bnd-LastModified: 1473426429679
+Bundle-Activator: idare.GEOSoft.internal.CyActivator
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1472124834576
 Import-Package: idare.GEOSoft;resolution:=optional,idare.ThirdParty;re
  solution:=optional,idare.imagenode;resolution:=optional,idare.imageno
  de.Interfaces.DataSetReaders;resolution:=optional,idare.imagenode.Int
@@ -10,24 +23,12 @@ Import-Package: idare.GEOSoft;resolution:=optional,idare.ThirdParty;re
  Interfaces.DataSetReaders.WorkBook.BasicImplementation;resolution:=op
  tional,idare.imagenode.Interfaces.Plugin;resolution:=optional,idare.i
  magenode.Utilities;resolution:=optional,idare.imagenode.exceptions.io
- ;resolution:=optional,javax.swing;resolution:=optional,javax.swing.ev
- ent;resolution:=optional,javax.swing.table;resolution:=optional,org.c
- ytoscape.service.util;version="[3.3,4)";resolution:=optional,org.cyto
- scape.work;version="[3.3,4)";resolution:=optional,org.cytoscape.work.
- swing;version="[3.3,4)";resolution:=optional,org.osgi.framework;versi
- on="[1.5,2)";resolution:=optional
-DynamicImport-Package: *
-Tool: Bnd-1.15.0
-Export-Package: idare.GEOSoft;uses:="org.cytoscape.work.swing,idare.im
- agenode.Interfaces.DataSetReaders,org.cytoscape.work,idare.imagenode.
- Utilities,idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImp
- lementation,idare.imagenode.Interfaces.DataSetReaders.WorkBook,idare.
- imagenode.exceptions.io,javax.swing,javax.swing.table,javax.swing.eve
- nt,idare.ThirdParty"
-Bundle-Version: 1.0
-Bundle-Name: GEOSoft [idare.GEOSoft]
-Bundle-Activator: idare.GEOSoft.internal.CyActivator
-Cytoscape-App-Dependencies: IDARE;1.0
-Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_91
+ ;resolution:=optional,idare.imagenode.internal;resolution:=optional,j
+ avax.swing;resolution:=optional,javax.swing.event;resolution:=optiona
+ l,javax.swing.table;resolution:=optional,org.cytoscape.service.util;r
+ esolution:=optional;version="[3.3,4)",org.cytoscape.work;resolution:=
+ optional;version="[3.3,4)",org.cytoscape.work.swing;resolution:=optio
+ nal;version="[3.3,4)",org.osgi.framework;resolution:=optional;version
+ ="[1.5,2)"
+Bundle-SymbolicName: GEOSoft
 

@@ -3,12 +3,12 @@ package idare.GEOSoft;
 import idare.imagenode.Interfaces.DataSetReaders.IDAREDatasetReader;
 import idare.imagenode.Interfaces.DataSetReaders.IDAREReaderSetupTask;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.IDARECell;
-import idare.imagenode.Interfaces.DataSetReaders.WorkBook.IDARECell.CellType;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.IDAREWorkbook;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.BasicIDARECell;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.BasicIDARERow;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.BasicIDARESheet;
 import idare.imagenode.Interfaces.DataSetReaders.WorkBook.BasicImplementation.BasicIDAREWorkbook;
+import idare.imagenode.Interfaces.DataSetReaders.WorkBook.IDARECell.CellType;
 import idare.imagenode.Utilities.StringUtils;
 import idare.imagenode.exceptions.io.WrongFormat;
 
@@ -165,7 +165,7 @@ public class GEOSoftReader extends IDAREDatasetReader {
 			{ 
 				currentline = br.readLine();
 			}
-			System.out.println("Reading: " + currentline);
+//			System.out.println("Reading: " + currentline);
 					
 		}				
 				
@@ -232,7 +232,7 @@ public class GEOSoftReader extends IDAREDatasetReader {
 	private String determineProperties(String currentline,BufferedReader br) throws IOException
 	{
 		currentline = br.readLine();
-		System.out.println("Reading Dataset Information");
+//		System.out.println("Reading Dataset Information");
 		while(currentline != null && !currentline.startsWith("^"))
 		{
 			if(currentline.startsWith(DATASET_TABLE_START))
@@ -258,7 +258,7 @@ public class GEOSoftReader extends IDAREDatasetReader {
 	private void prepareInformationRequest(BufferedReader br) throws IOException
 	{
 		String currentline = br.readLine();
-		System.out.println(currentline);
+//		System.out.println(currentline);
 		Vector<String> DataIDs = new Vector<String>(Arrays.asList(currentline.split("\t")));
 		//Set up the ID to position map.
 		for(int i = 0; i < DataIDs.size(); i++)
@@ -545,11 +545,7 @@ public class GEOSoftReader extends IDAREDatasetReader {
 			}
 			currentcell.setValue(groupid);		
 		}
-		for(IDARECell cell : headerrow)
-		{
-			System.out.print(cell.getFormattedCellValue() + "\t");
-		}
-		System.out.println();
+//		System.out.println();
 		int maxlines = 0;
 		//this is the header line
 		String currentline = br.readLine();
@@ -631,7 +627,7 @@ public class GEOSoftReader extends IDAREDatasetReader {
 	 */
 	@Override
 	public void resetReader() {
-		System.out.println("Resetting Reader");
+//		System.out.println("Resetting Reader");
 		//clear the stored information
 		sampleSets = new HashMap<String, Vector<String>>();
 		subsetIDs = new Vector<String>();
